@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nc-dark: #2D2A26;
+  --color-nc-bg: #F9F5F0;
+  --color-nc-pink: #E8A598;
+  --color-nc-green: #9CB18E;
+  --color-nc-orange: #F2D2BD;
+  --color-nc-white: #FFFFFF;
+  --color-nc-brown: #8B5A2B;
+
+  --font-serif: "Playfair Display", serif;
+  --font-script: "Pinyon Script", cursive;
+  --font-sans: "Inter", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+}
+
+@layer utilities {
+  .bento-box {
+    @apply border-2 border-nc-dark rounded-[2.5rem] shadow-[6px_6px_0px_0px_#2D2A26] overflow-hidden;
+  }
+  .bento-title {
+    @apply font-black tracking-tighter uppercase italic leading-none;
+  }
+  .bento-shadow {
+    @apply shadow-[6px_6px_0px_0px_#2D2A26];
+  }
+}
+
+html, body {
+  @apply bg-nc-bg text-nc-dark font-sans m-0 p-0;
+  overflow-x: hidden;
+}
