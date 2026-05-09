@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Libre+Baskerville:ital@0;1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #2E5A4B;
+  --color-cream: #F2EDE4;
+  --color-gold: #D4AF37;
+  --font-serif-heading: 'Georgia', serif;
+  --font-serif-body: 'Libre Baskerville', serif;
+  --font-script: 'Georgia', serif;
+}
+
+@layer utilities {
+  .regatta-stripes {
+    background: repeating-linear-gradient(90deg, var(--color-forest), var(--color-forest) 50px, var(--color-cream) 50px, var(--color-cream) 100px);
+  }
+  .regatta-stripes-subtle {
+    background: repeating-linear-gradient(90deg, var(--color-forest), var(--color-forest) 10px, var(--color-cream) 10px, var(--color-cream) 20px);
+    opacity: 0.15;
+  }
+  .gold-border {
+    border: 1px solid var(--color-gold);
+  }
+  .gold-text {
+    color: var(--color-gold);
+  }
+  .script-font {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+  }
+  .heading-font {
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  .bow-motif {
+    width: 24px;
+    height: 16px;
+    position: relative;
+    display: inline-block;
+  }
+  .bow-left, .bow-right {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--color-gold);
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(-45deg);
+  }
+  .bow-right {
+    left: 10px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(45deg);
+  }
+  .bow-knot {
+    position: absolute;
+    left: 8px;
+    top: 3px;
+    width: 4px;
+    height: 4px;
+    background: var(--color-gold);
+    border-radius: 1px;
+  }
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-forest);
+  font-family: var(--font-serif-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif-heading);
+}
+
+/* Vintage image filter */
+.vintage-img {
+  filter: grayscale(1) opacity(0.8);
+  mix-blend-mode: multiply;
+}
+
