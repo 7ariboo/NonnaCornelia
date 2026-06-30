@@ -146,12 +146,12 @@ const StorySection = () => (
         </div>
       </div>
 
-      {/* Image — right on desktop, bottom on mobile */}
-      <div className="flex-1 flex items-center justify-center">
+      {/* Image — right on desktop, hidden on mobile */}
+      <div className="flex-1 hidden md:flex items-center justify-center">
         <img 
           src="/images/Bambina.png" 
           alt="La piccola Cornelia" 
-          className="w-[80%] md:w-full max-w-[400px] h-auto object-contain rounded-lg shadow-xl"
+          className="w-full max-w-[400px] h-auto object-contain rounded-lg shadow-xl"
         />
       </div>
     </div>
@@ -161,7 +161,7 @@ const StorySection = () => (
 const SecretsSection = () => {
   return (
     <section id="qualita" className="py-20 md:py-24 px-4 md:px-8 bg-forest text-cream text-center border-b-2 border-gold/30 flex items-center justify-center">
-      <div className="w-[90%] md:w-full max-w-[700px] mx-auto">
+      <div className="w-[90%] md:w-full max-w-[950px] mx-auto">
         <img src="/images/Segreti.png" alt="I Segreti della Nonna" className="w-full h-auto object-contain drop-shadow-xl" />
       </div>
     </section>
@@ -169,20 +169,20 @@ const SecretsSection = () => {
 };
 
 const CentralImageSection = () => (
-  <section className="relative h-[200vh] w-full regatta-stripes bg-fixed">
+  <section className="relative h-[130vh] w-full regatta-stripes bg-fixed">
     <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-[90%] md:w-full h-auto max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-[90%] md:w-full h-auto max-w-[950px] mx-auto object-contain drop-shadow-xl" />
     </div>
   </section>
 );
 
 const ContactSection = () => (
-  <section id="contatti" className="relative h-[200vh] w-full regatta-stripes bg-fixed">
+  <section id="contatti" className="relative h-[130vh] w-full regatta-stripes bg-fixed">
     <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center gap-4 md:gap-4 overflow-hidden px-2 md:px-8 py-4 md:py-4">
       <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Orari.png" alt="I Nostri Orari" className="relative z-10 w-[90%] md:w-[80%] h-auto max-h-[45vh] md:max-h-[45vh] max-w-[700px] mx-auto object-contain drop-shadow-2xl" />
-      <img src="/images/Vieni.png" alt="Vieni a Trovarci" className="relative z-10 w-[90%] md:w-[80%] h-auto max-h-[45vh] md:max-h-[45vh] max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+      <img src="/images/Orari.png" alt="I Nostri Orari" className="relative z-10 w-[90%] md:w-[80%] h-auto max-h-[45vh] md:max-h-[45vh] max-w-[950px] mx-auto object-contain drop-shadow-2xl" />
+      <img src="/images/Vieni.png" alt="Vieni a Trovarci" className="relative z-10 w-[90%] md:w-[80%] h-auto max-h-[45vh] md:max-h-[45vh] max-w-[950px] mx-auto object-contain drop-shadow-xl" />
     </div>
   </section>
 );
