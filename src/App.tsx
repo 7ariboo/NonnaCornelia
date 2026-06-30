@@ -91,7 +91,7 @@ const Navbar = () => {
 };
 
 const OvalLogo = () => (
-  <div className="w-[85%] md:w-[900px] flex items-center justify-center relative z-10" style={{aspectRatio: '1.5/1'}}>
+  <div className="w-[75%] md:w-[500px] mx-auto flex items-center justify-center relative z-10" style={{aspectRatio: '1.5/1'}}>
     <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="w-full h-auto object-contain drop-shadow-2xl" />
   </div>
 );
@@ -112,45 +112,46 @@ const Hero = () => {
 
 const VideoSection = () => (
   <section className="relative h-screen flex items-center justify-center bg-forest overflow-hidden border-b-2 border-gold/30">
-    <video 
-      autoPlay 
-      loop 
-      muted 
-      playsInline
-      className="absolute inset-0 w-full h-full object-cover"
-    >
-      <source src="/VIDEO HOME.mp4" type="video/mp4" />
-    </video>
-    <div className="relative z-10">
-      <OvalLogo />
+    <div className="relative z-10 w-[90%] md:w-[80%] max-w-[700px] mx-auto">
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        className="w-full h-auto rounded-lg shadow-2xl"
+      >
+        <source src="/VIDEO HOME.mp4" type="video/mp4" />
+      </video>
     </div>
   </section>
 );
 
 const StorySection = () => (
-  <section id="storia" className="relative min-h-[80vh] flex items-center justify-center border-b border-gold/30 overflow-hidden">
-    {/* Background Image */}
-    <div className="absolute inset-0 z-0">
-      <img 
-        src="/images/Bambina.png" 
-        alt="Sfondo Storia" 
-        className="w-full h-full object-cover opacity-40"
-      />
-      <div className="absolute inset-0 bg-cream/60"></div>
-    </div>
-    
-    <div className="relative z-10 max-w-4xl px-6 py-12 md:py-20 flex flex-col items-center text-center">
-      <h2 className="heading-font text-4xl md:text-6xl mb-8 italic text-forest">La Nostra Storia</h2>
-      <p className="text-lg md:text-2xl leading-relaxed mb-6 font-serif italic text-gray-800">
-        Negli anni '60, in Brianza, il padre di Cornelia aveva un carretto dei gelati. Ogni giorno attraversava paesi e piazze. Cornelia era sempre con lui ed è lì che ha imparato tutto.
-      </p>
-      <p className="text-lg md:text-2xl leading-relaxed mb-10 font-serif italic text-gray-800">
-        Prima di uscire, suo padre le legava sempre un fiocco giallo nei capelli. Cornelia gli chiese perché: <strong>"COSÌ TI VEDO SEMPRE."</strong> Nel caos della gente, era il suo segno distintivo. Oggi è rimasto.
-      </p>
-      <div className="flex items-center gap-4">
-        <span className="w-20 h-[1px] bg-gold"></span>
-        <span className="text-[12px] md:text-[14px] uppercase tracking-widest gold-text font-bold">L'Antica Tradizione</span>
-        <span className="w-20 h-[1px] bg-gold"></span>
+  <section id="storia" className="relative min-h-[80vh] flex items-center justify-center border-b border-gold/30 overflow-hidden bg-cream">
+    <div className="relative z-10 w-full max-w-[1100px] mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-14">
+      {/* Text — left on desktop, top on mobile */}
+      <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+        <h2 className="heading-font text-4xl md:text-5xl mb-8 italic text-forest">La Nostra Storia</h2>
+        <p className="text-lg md:text-xl leading-relaxed mb-6 font-serif italic text-gray-800">
+          Negli anni '60, in Brianza, il padre di Cornelia aveva un carretto dei gelati. Ogni giorno attraversava paesi e piazze. Cornelia era sempre con lui ed è lì che ha imparato tutto.
+        </p>
+        <p className="text-lg md:text-xl leading-relaxed mb-10 font-serif italic text-gray-800">
+          Prima di uscire, suo padre le legava sempre un fiocco giallo nei capelli. Cornelia gli chiese perché: <strong>"COSÌ TI VEDO SEMPRE."</strong> Nel caos della gente, era il suo segno distintivo. Oggi è rimasto.
+        </p>
+        <div className="flex items-center gap-4">
+          <span className="w-20 h-[1px] bg-gold"></span>
+          <span className="text-[12px] md:text-[14px] uppercase tracking-widest gold-text font-bold">L'Antica Tradizione</span>
+          <span className="w-20 h-[1px] bg-gold"></span>
+        </div>
+      </div>
+
+      {/* Image — right on desktop, bottom on mobile */}
+      <div className="flex-1 flex items-center justify-center">
+        <img 
+          src="/images/Bambina.png" 
+          alt="La piccola Cornelia" 
+          className="w-[80%] md:w-full max-w-[400px] h-auto object-contain rounded-lg shadow-xl"
+        />
       </div>
     </div>
   </section>
@@ -159,7 +160,7 @@ const StorySection = () => (
 const SecretsSection = () => {
   return (
     <section id="qualita" className="py-20 md:py-24 px-4 md:px-8 bg-forest text-cream text-center border-b-2 border-gold/30 flex items-center justify-center">
-      <div className="w-[95%] md:w-full max-w-[1200px]">
+      <div className="w-[90%] md:w-full max-w-[700px] mx-auto">
         <img src="/images/Segreti.png" alt="I Segreti della Nonna" className="w-full h-auto object-contain drop-shadow-xl" />
       </div>
     </section>
@@ -170,7 +171,7 @@ const CentralImageSection = () => (
   <section className="relative h-[200vh] w-full regatta-stripes bg-fixed">
     <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-[95%] md:w-full h-auto max-w-[1200px] object-contain drop-shadow-xl" />
+      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-[90%] md:w-full h-auto max-w-[700px] mx-auto object-contain drop-shadow-xl" />
     </div>
   </section>
 );
@@ -179,8 +180,8 @@ const ContactSection = () => (
   <section id="contatti" className="relative h-[200vh] w-full regatta-stripes bg-fixed">
     <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center gap-4 md:gap-4 overflow-hidden px-2 md:px-8 py-4 md:py-4">
       <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Orari.png" alt="I Nostri Orari" className="relative z-10 w-[95%] md:w-[95%] h-auto max-h-[48vh] md:max-h-[48vh] max-w-[1400px] object-contain drop-shadow-2xl" />
-      <img src="/images/Vieni.png" alt="Vieni a Trovarci" className="relative z-10 w-[95%] md:w-[95%] h-auto max-h-[48vh] md:max-h-[48vh] max-w-[1400px] object-contain drop-shadow-xl" />
+      <img src="/images/Orari.png" alt="I Nostri Orari" className="relative z-10 w-[90%] md:w-[80%] h-auto max-h-[45vh] md:max-h-[45vh] max-w-[700px] mx-auto object-contain drop-shadow-2xl" />
+      <img src="/images/Vieni.png" alt="Vieni a Trovarci" className="relative z-10 w-[90%] md:w-[80%] h-auto max-h-[45vh] md:max-h-[45vh] max-w-[700px] mx-auto object-contain drop-shadow-xl" />
     </div>
   </section>
 );
