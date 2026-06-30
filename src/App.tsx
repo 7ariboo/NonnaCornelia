@@ -162,7 +162,7 @@ const SecretsSection = () => {
   return (
     <section id="qualita" className="h-screen px-0 lg:px-8 bg-forest text-cream text-center border-b-2 border-gold/30 flex items-center justify-center">
       <div className="w-full lg:w-[80%] lg:max-w-[700px] mx-auto flex items-center justify-center h-full">
-        <img src="/images/Segreti.png" alt="I Segreti della Nonna" className="w-full max-h-[85vh] lg:max-h-none lg:h-auto object-contain drop-shadow-xl" />
+        <img src="/images/Segreti.png" alt="I Segreti della Nonna" className="w-full max-h-[95vh] lg:max-h-none lg:h-auto object-contain drop-shadow-xl" />
       </div>
     </section>
   );
@@ -172,7 +172,7 @@ const CentralImageSection = () => (
   <section className="relative h-[115vh] lg:h-[130vh] w-full regatta-stripes bg-fixed">
     <div className="sticky top-[7.5vh] lg:top-0 h-[85vh] lg:h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-[95%] lg:w-[80%] h-auto lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-full lg:w-[80%] max-h-[95vh] lg:max-h-none h-auto lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
     </div>
   </section>
 );
