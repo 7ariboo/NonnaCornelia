@@ -73,8 +73,8 @@ const Navbar = () => {
             transform: `translateY(${logoTranslateY}px) scale(${logoScale})`
           }}
         >
-          <div className="w-16 md:w-36 flex items-center justify-center" style={{aspectRatio: '1.5/1'}}>
-            <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="w-full h-auto object-contain" />
+          <div className="h-[50px] md:h-[64px] flex items-center justify-center">
+            <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="h-full w-auto object-contain" />
           </div>
         </div>
 
