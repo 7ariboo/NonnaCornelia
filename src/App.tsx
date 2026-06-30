@@ -182,7 +182,7 @@ const SecretsSection = () => {
           transition={{ duration: 0.8 }}
           src="/images/Segreti.png" 
           alt="I Segreti della Nonna" 
-          className="w-[160%] max-w-[160%] md:w-full md:max-w-none max-h-[95vh] lg:max-h-none lg:h-auto object-contain drop-shadow-xl" 
+          className="w-[125%] max-w-[125%] md:w-full md:max-w-none max-h-[95vh] lg:max-h-none lg:h-auto object-contain drop-shadow-xl" 
         />
       </div>
     </section>
@@ -193,7 +193,7 @@ const CentralImageSection = () => (
   <section className="relative h-[115vh] lg:h-[130vh] w-full regatta-stripes bg-fixed">
     <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden px-0 lg:px-0">
       <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-[160%] max-w-[160%] md:w-full lg:w-[80%] max-h-screen lg:max-h-none h-auto lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-[125%] max-w-[125%] md:w-full lg:w-[80%] max-h-screen lg:max-h-none h-auto lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
     </div>
   </section>
 );
@@ -207,13 +207,13 @@ const ContactSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.6 }}
-        src="/images/Orari.png" alt="I Nostri Orari" className="relative z-10 w-full lg:w-[80%] h-auto max-h-[48vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl" />
+        src="/images/Orari.png" alt="I Nostri Orari" className="relative z-10 w-[125%] max-w-[125%] md:w-full lg:w-[80%] h-auto max-h-[48vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl" />
       <motion.img 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        src="/images/Vieni.png" alt="Vieni a Trovarci" className="relative z-10 w-full lg:w-[80%] h-auto max-h-[48vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+        src="/images/Vieni.png" alt="Vieni a Trovarci" className="relative z-10 w-[125%] max-w-[125%] md:w-full lg:w-[80%] h-auto max-h-[48vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
     </div>
   </section>
 );
