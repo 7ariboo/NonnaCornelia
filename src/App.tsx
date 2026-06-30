@@ -27,9 +27,16 @@ const Navbar = () => {
   const logoScale = 0.5 + (progress * 0.5); 
   const logoTranslateY = 60 * (1 - progress); 
 
+  const pillStyle = {
+    backgroundColor: `rgba(242, 237, 228, ${progress})`,
+    borderColor: `rgba(212, 175, 55, ${progress * 0.3})`,
+    boxShadow: `0 2px 8px rgba(0,0,0,${progress * 0.1})`,
+    color: 'var(--color-forest)'
+  };
+
   return (
     <header 
-      className={`fixed top-0 left-0 w-full h-[70px] md:h-20 flex items-center justify-between px-4 md:px-10 z-50 overflow-hidden ${progress > 0 ? 'shadow-md' : 'shadow-sm'}`}
+      className={`fixed top-0 left-0 w-full h-[70px] md:h-20 z-50 overflow-hidden ${progress > 0 ? 'shadow-md' : 'shadow-sm'}`}
       style={{
         borderBottom: `1px solid rgba(212, 175, 55, ${borderOpacity})`
       }}
@@ -47,42 +54,37 @@ const Navbar = () => {
         style={{ opacity: stripesOpacity * 0.1 }}
       ></div>
       
-      <nav 
-        className="relative z-10 flex items-center gap-2 md:gap-8 text-[9px] md:text-[11px] font-bold tracking-widest uppercase px-3 md:px-4 py-2 rounded-full border transition-colors duration-300"
-        style={{ 
-          backgroundColor: `rgba(242, 237, 228, ${progress})`,
-          borderColor: `rgba(212, 175, 55, ${progress * 0.3})`,
-          boxShadow: `0 2px 8px rgba(0,0,0,${progress * 0.1})`,
-          color: 'var(--color-forest)'
-        }}
-      >
-        <a href="#storia" className="hover:text-gold transition-colors">La Storia</a>
-        <a href="#gusti" className="hover:text-gold transition-colors hidden sm:inline">I Gusti</a>
-      </nav>
+      {/* 3-column grid: left nav | center logo | right nav */}
+      <div className="relative z-10 h-full grid grid-cols-[1fr_auto_1fr] items-center px-3 md:px-10">
+        {/* Left nav — aligned left */}
+        <nav 
+          className="justify-self-start flex items-center gap-2 md:gap-8 text-[8px] md:text-[11px] font-bold tracking-widest uppercase px-2 md:px-4 py-1.5 md:py-2 rounded-full border transition-colors duration-300 whitespace-nowrap"
+          style={pillStyle}
+        >
+          <a href="#storia" className="hover:text-gold transition-colors">La Storia</a>
+          <a href="#gusti" className="hover:text-gold transition-colors hidden sm:inline">I Gusti</a>
+        </nav>
 
-      {/* Embedded Logo visible on scroll */}
-      <div 
-        className="absolute left-1/2 flex items-center justify-center pointer-events-none z-10"
-        style={{
-          opacity: progress,
-          transform: `translateX(-50%) translateY(${logoTranslateY}px) scale(${logoScale})`
-        }}
-      >
-        <div className="w-24 md:w-36 flex items-center justify-center" style={{aspectRatio: '1.5/1'}}>
-          <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="w-full h-auto object-contain" />
+        {/* Center logo — stays in its own column */}
+        <div 
+          className="flex items-center justify-center pointer-events-none"
+          style={{
+            opacity: progress,
+            transform: `translateY(${logoTranslateY}px) scale(${logoScale})`
+          }}
+        >
+          <div className="w-16 md:w-36 flex items-center justify-center" style={{aspectRatio: '1.5/1'}}>
+            <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="w-full h-auto object-contain" />
+          </div>
         </div>
-      </div>
 
-      <div 
-        className="relative z-10 flex items-center gap-2 md:gap-8 text-[9px] md:text-[11px] font-bold tracking-widest uppercase px-3 md:px-4 py-2 rounded-full border transition-colors duration-300"
-        style={{ 
-          backgroundColor: `rgba(242, 237, 228, ${progress})`,
-          borderColor: `rgba(212, 175, 55, ${progress * 0.3})`,
-          boxShadow: `0 2px 8px rgba(0,0,0,${progress * 0.1})`,
-          color: 'var(--color-forest)'
-        }}
-      >
-        <a href="#contatti" className="hover:text-gold transition-colors">Dove Siamo</a>
+        {/* Right nav — aligned right */}
+        <div 
+          className="justify-self-end flex items-center gap-2 md:gap-8 text-[8px] md:text-[11px] font-bold tracking-widest uppercase px-2 md:px-4 py-1.5 md:py-2 rounded-full border transition-colors duration-300 whitespace-nowrap"
+          style={pillStyle}
+        >
+          <a href="#contatti" className="hover:text-gold transition-colors">Dove Siamo</a>
+        </div>
       </div>
     </header>
   );
