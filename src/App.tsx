@@ -160,7 +160,7 @@ const StorySection = () => (
 
 const SecretsSection = () => {
   return (
-    <section id="qualita" className="py-8 lg:py-20 px-2 lg:px-8 bg-forest text-cream text-center border-b-2 border-gold/30 flex items-center justify-center">
+    <section id="qualita" className="h-screen px-2 lg:px-8 bg-forest text-cream text-center border-b-2 border-gold/30 flex items-center justify-center">
       <div className="w-full lg:w-[80%] lg:max-w-[700px] mx-auto">
         <img src="/images/Segreti.png" alt="I Segreti della Nonna" className="w-full h-auto object-contain drop-shadow-xl" />
       </div>
