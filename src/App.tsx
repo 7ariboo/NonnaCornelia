@@ -48,7 +48,7 @@ const Navbar = () => {
       ></div>
       
       <nav 
-        className="relative z-10 flex items-center gap-3 md:gap-8 text-[10px] md:text-[11px] font-bold tracking-widest uppercase px-3 md:px-4 py-2 rounded-full border transition-colors duration-300"
+        className="relative z-10 flex items-center gap-2 md:gap-8 text-[9px] md:text-[11px] font-bold tracking-widest uppercase px-3 md:px-4 py-2 rounded-full border transition-colors duration-300"
         style={{ 
           backgroundColor: `rgba(242, 237, 228, ${progress})`,
           borderColor: `rgba(212, 175, 55, ${progress * 0.3})`,
@@ -57,7 +57,7 @@ const Navbar = () => {
         }}
       >
         <a href="#storia" className="hover:text-gold transition-colors">La Storia</a>
-        <a href="#gusti" className="hover:text-gold transition-colors">I Gusti</a>
+        <a href="#gusti" className="hover:text-gold transition-colors hidden sm:inline">I Gusti</a>
       </nav>
 
       {/* Embedded Logo visible on scroll */}
@@ -68,13 +68,13 @@ const Navbar = () => {
           transform: `translateX(-50%) translateY(${logoTranslateY}px) scale(${logoScale})`
         }}
       >
-        <div className="w-32 md:w-36 flex items-center justify-center" style={{aspectRatio: '1.5/1'}}>
+        <div className="w-24 md:w-36 flex items-center justify-center" style={{aspectRatio: '1.5/1'}}>
           <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="w-full h-auto object-contain" />
         </div>
       </div>
 
       <div 
-        className="relative z-10 flex items-center gap-3 md:gap-8 text-[10px] md:text-[11px] font-bold tracking-widest uppercase px-3 md:px-4 py-2 rounded-full border transition-colors duration-300"
+        className="relative z-10 flex items-center gap-2 md:gap-8 text-[9px] md:text-[11px] font-bold tracking-widest uppercase px-3 md:px-4 py-2 rounded-full border transition-colors duration-300"
         style={{ 
           backgroundColor: `rgba(242, 237, 228, ${progress})`,
           borderColor: `rgba(212, 175, 55, ${progress * 0.3})`,
@@ -137,7 +137,7 @@ const StorySection = () => (
       <div className="absolute inset-0 bg-cream/60"></div>
     </div>
     
-    <div className="relative z-10 max-w-4xl px-8 py-20 flex flex-col items-center text-center">
+    <div className="relative z-10 max-w-4xl px-6 py-12 md:py-20 flex flex-col items-center text-center">
       <h2 className="heading-font text-4xl md:text-6xl mb-8 italic text-forest">La Nostra Storia</h2>
       <p className="text-lg md:text-2xl leading-relaxed mb-6 font-serif italic text-gray-800">
         Negli anni '60, in Brianza, il padre di Cornelia aveva un carretto dei gelati. Ogni giorno attraversava paesi e piazze. Cornelia era sempre con lui ed è lì che ha imparato tutto.
@@ -156,8 +156,8 @@ const StorySection = () => (
 
 const SecretsSection = () => {
   return (
-    <section id="qualita" className="py-24 px-4 md:px-8 bg-forest text-cream text-center border-b-2 border-gold/30 flex items-center justify-center">
-      <div className="w-full max-w-[95%] md:max-w-[1200px]">
+    <section id="qualita" className="py-20 md:py-24 px-4 md:px-8 bg-forest text-cream text-center border-b-2 border-gold/30 flex items-center justify-center">
+      <div className="w-[95%] md:w-full max-w-[1200px]">
         <img src="/images/Segreti.png" alt="I Segreti della Nonna" className="w-full h-auto object-contain drop-shadow-xl" />
       </div>
     </section>
@@ -168,25 +168,17 @@ const CentralImageSection = () => (
   <section className="relative h-[200vh] w-full regatta-stripes bg-fixed">
     <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-full h-auto max-w-[95%] md:max-w-[1200px] object-contain drop-shadow-xl" />
+      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-[95%] md:w-full h-auto max-w-[1200px] object-contain drop-shadow-xl" />
     </div>
   </section>
 );
 
-const ScheduleSection = () => (
+const ContactSection = () => (
   <section id="contatti" className="relative h-[200vh] w-full regatta-stripes bg-fixed">
-    <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
+    <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center gap-4 md:gap-4 overflow-hidden px-2 md:px-8 py-4 md:py-4">
       <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Orari.png" alt="I Nostri Orari" className="relative z-10 w-full h-auto max-w-[95%] md:max-w-[1200px] object-contain drop-shadow-2xl" />
-    </div>
-  </section>
-);
-
-const VieniSection = () => (
-  <section id="vieni" className="relative h-[200vh] w-full regatta-stripes bg-fixed">
-    <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Vieni.png" alt="Vieni a Trovarci" className="relative z-10 w-full h-auto max-w-[95%] md:max-w-[1200px] object-contain drop-shadow-xl mt-24 md:mt-40" />
+      <img src="/images/Orari.png" alt="I Nostri Orari" className="relative z-10 w-[95%] md:w-[95%] h-auto max-h-[48vh] md:max-h-[48vh] max-w-[1400px] object-contain drop-shadow-2xl" />
+      <img src="/images/Vieni.png" alt="Vieni a Trovarci" className="relative z-10 w-[95%] md:w-[95%] h-auto max-h-[48vh] md:max-h-[48vh] max-w-[1400px] object-contain drop-shadow-xl" />
     </div>
   </section>
 );
@@ -234,8 +226,7 @@ export default function App() {
       <StorySection />
       <SecretsSection />
       <CentralImageSection />
-      <ScheduleSection />
-      <VieniSection />
+      <ContactSection />
       <Footer />
     </div>
   );
