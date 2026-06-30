@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Droplet, Leaf, Milk as MilkIcon, Award, Instagram, Facebook, Apple } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const CssBow = () => (
   <div className="bow-motif">
@@ -131,7 +132,13 @@ const StorySection = () => (
   <section id="storia" className="relative min-h-[80vh] flex items-center justify-center border-b border-gold/30 overflow-hidden bg-cream">
     <div className="relative z-10 w-full max-w-[1100px] mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-14">
       {/* Text — left on desktop, top on mobile */}
-      <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="flex-1 flex flex-col items-center md:items-start text-center md:text-left"
+      >
         <h2 className="heading-font text-4xl md:text-5xl mb-8 italic text-forest">La Nostra Storia</h2>
         <p className="text-lg md:text-xl leading-relaxed mb-6 font-serif italic text-gray-800">
           Negli anni '60, in Brianza, il padre di Cornelia aveva un carretto dei gelati. Ogni giorno attraversava paesi e piazze. Cornelia era sempre con lui ed è lì che ha imparato tutto.
@@ -144,16 +151,22 @@ const StorySection = () => (
           <span className="text-[12px] md:text-[14px] uppercase tracking-widest gold-text font-bold">L'Antica Tradizione</span>
           <span className="w-20 h-[1px] bg-gold"></span>
         </div>
-      </div>
+      </motion.div>
 
       {/* Image — right on desktop, hidden on mobile */}
-      <div className="flex-1 hidden md:flex items-center justify-center">
+      <motion.div 
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="flex-1 hidden md:flex items-center justify-center"
+      >
         <img 
           src="/images/Bambina.png" 
           alt="La piccola Cornelia" 
           className="w-full max-w-[400px] h-auto object-contain rounded-lg shadow-xl"
         />
-      </div>
+      </motion.div>
     </div>
   </section>
 );
@@ -162,7 +175,15 @@ const SecretsSection = () => {
   return (
     <section id="qualita" className="h-screen px-0 lg:px-8 bg-forest text-cream text-center border-b-2 border-gold/30 flex items-center justify-center">
       <div className="w-full lg:w-[80%] lg:max-w-[700px] mx-auto flex items-center justify-center h-full">
-        <img src="/images/Segreti.png" alt="I Segreti della Nonna" className="w-full max-h-[95vh] lg:max-h-none lg:h-auto object-contain drop-shadow-xl" />
+        <motion.img 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8 }}
+          src="/images/Segreti.png" 
+          alt="I Segreti della Nonna" 
+          className="w-full max-h-[95vh] lg:max-h-none lg:h-auto object-contain drop-shadow-xl" 
+        />
       </div>
     </section>
   );
@@ -170,19 +191,29 @@ const SecretsSection = () => {
 
 const CentralImageSection = () => (
   <section className="relative h-[115vh] lg:h-[130vh] w-full regatta-stripes bg-fixed">
-    <div className="sticky top-[7.5vh] lg:top-0 h-[85vh] lg:h-screen w-full flex items-center justify-center overflow-hidden">
+    <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden px-0 lg:px-0">
       <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-full lg:w-[80%] max-h-[95vh] lg:max-h-none h-auto lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+      <img src="/images/Storia.png" alt="La nostra storia" className="relative z-10 w-full lg:w-[80%] max-h-screen lg:max-h-none h-auto lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
     </div>
   </section>
 );
 
 const ContactSection = () => (
   <section id="contatti" className="relative h-[115vh] lg:h-[130vh] w-full regatta-stripes bg-fixed">
-    <div className="sticky top-[7.5vh] lg:top-0 h-[85vh] lg:h-screen w-full flex flex-col items-center justify-center gap-4 overflow-hidden px-2 lg:px-8 py-2 lg:py-4">
+    <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center gap-2 lg:gap-4 overflow-hidden px-0 lg:px-8 py-0 lg:py-4">
       <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <img src="/images/Orari.png" alt="I Nostri Orari" className="relative z-10 w-[95%] lg:w-[80%] h-auto max-h-[40vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl" />
-      <img src="/images/Vieni.png" alt="Vieni a Trovarci" className="relative z-10 w-[95%] lg:w-[80%] h-auto max-h-[40vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+      <motion.img 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6 }}
+        src="/images/Orari.png" alt="I Nostri Orari" className="relative z-10 w-full lg:w-[80%] h-auto max-h-[48vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl" />
+      <motion.img 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        src="/images/Vieni.png" alt="Vieni a Trovarci" className="relative z-10 w-full lg:w-[80%] h-auto max-h-[48vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
     </div>
   </section>
 );
