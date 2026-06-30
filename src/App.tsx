@@ -112,16 +112,17 @@ const Hero = () => {
 
 const VideoSection = () => (
   <section className="relative h-screen flex items-center justify-center bg-forest overflow-hidden border-b-2 border-gold/30">
-    <div className="relative z-10 w-[90%] md:w-[80%] max-w-[700px] mx-auto">
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-        className="w-full h-auto rounded-lg shadow-2xl"
-      >
-        <source src="/VIDEO HOME.mp4" type="video/mp4" />
-      </video>
+    <video 
+      autoPlay 
+      loop 
+      muted 
+      playsInline
+      className="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/VIDEO HOME.mp4" type="video/mp4" />
+    </video>
+    <div className="relative z-10">
+      <OvalLogo />
     </div>
   </section>
 );
@@ -186,7 +187,101 @@ const ContactSection = () => (
   </section>
 );
 
-const Footer = () => (
+const PolicyModal = ({ title, onClose, children }: { title: string; onClose: () => void; children: React.ReactNode }) => (
+  <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4" onClick={onClose}>
+    <div 
+      className="bg-cream rounded-xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto gold-border"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="sticky top-0 bg-cream border-b border-gold/30 px-6 py-4 flex items-center justify-between rounded-t-xl">
+        <h2 className="heading-font text-xl md:text-2xl text-forest">{title}</h2>
+        <button onClick={onClose} className="text-forest/60 hover:text-forest text-2xl leading-none transition-colors">&times;</button>
+      </div>
+      <div className="px-6 py-6 text-forest/80 text-sm md:text-base leading-relaxed font-serif space-y-4">
+        {children}
+      </div>
+    </div>
+  </div>
+);
+
+const PrivacyContent = () => (
+  <>
+    <p><strong>Ultimo aggiornamento:</strong> {new Date().toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    <h3 className="heading-font text-lg text-forest mt-6">1. Titolare del Trattamento</h3>
+    <p>Il titolare del trattamento dei dati è Nonna Cornelia, con sede legale in Brianza (MB), Italia. P.IVA: IT01234567890.</p>
+    <h3 className="heading-font text-lg text-forest mt-6">2. Dati Raccolti</h3>
+    <p>Raccogliamo i seguenti dati personali:</p>
+    <ul className="list-disc pl-6 space-y-1">
+      <li>Dati di navigazione (indirizzo IP, browser, sistema operativo)</li>
+      <li>Cookie tecnici e analitici</li>
+      <li>Dati forniti volontariamente dall'utente tramite form di contatto</li>
+    </ul>
+    <h3 className="heading-font text-lg text-forest mt-6">3. Finalità del Trattamento</h3>
+    <p>I dati personali sono trattati per:</p>
+    <ul className="list-disc pl-6 space-y-1">
+      <li>Garantire il corretto funzionamento del sito</li>
+      <li>Analisi statistica anonima del traffico</li>
+      <li>Rispondere alle richieste degli utenti</li>
+    </ul>
+    <h3 className="heading-font text-lg text-forest mt-6">4. Base Giuridica</h3>
+    <p>Il trattamento si basa sul consenso dell'utente e sull'interesse legittimo del titolare, ai sensi del Regolamento UE 2016/679 (GDPR).</p>
+    <h3 className="heading-font text-lg text-forest mt-6">5. Conservazione dei Dati</h3>
+    <p>I dati saranno conservati per il tempo strettamente necessario alle finalità indicate e comunque non oltre 24 mesi.</p>
+    <h3 className="heading-font text-lg text-forest mt-6">6. Diritti dell'Utente</h3>
+    <p>L'utente ha diritto di accedere, rettificare, cancellare i propri dati, limitare o opporsi al trattamento e alla portabilità dei dati. Per esercitare tali diritti, contattare: <strong>privacy@nonnacornelia.it</strong></p>
+    <h3 className="heading-font text-lg text-forest mt-6">7. Modifiche</h3>
+    <p>Ci riserviamo il diritto di aggiornare questa informativa. La data dell'ultimo aggiornamento è indicata in alto.</p>
+  </>
+);
+
+const CookieContent = () => (
+  <>
+    <p><strong>Ultimo aggiornamento:</strong> {new Date().toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    <h3 className="heading-font text-lg text-forest mt-6">1. Cosa sono i Cookie</h3>
+    <p>I cookie sono piccoli file di testo che vengono memorizzati sul dispositivo dell'utente durante la navigazione. Servono a migliorare l'esperienza di navigazione e a raccogliere informazioni sull'utilizzo del sito.</p>
+    <h3 className="heading-font text-lg text-forest mt-6">2. Cookie Tecnici</h3>
+    <p>Questi cookie sono essenziali per il corretto funzionamento del sito e non possono essere disabilitati. Includono cookie di sessione e preferenze di consenso.</p>
+    <h3 className="heading-font text-lg text-forest mt-6">3. Cookie Analitici</h3>
+    <p>Utilizziamo cookie analitici per comprendere come gli utenti interagiscono con il sito, raccogliendo informazioni in forma anonima e aggregata.</p>
+    <h3 className="heading-font text-lg text-forest mt-6">4. Cookie di Terze Parti</h3>
+    <p>Il sito potrebbe includere componenti di terze parti (es. mappe, social media) che installano propri cookie. Il titolare non ha controllo sui cookie di terze parti.</p>
+    <h3 className="heading-font text-lg text-forest mt-6">5. Gestione dei Cookie</h3>
+    <p>L'utente può gestire le preferenze sui cookie tramite le impostazioni del proprio browser. La disattivazione dei cookie potrebbe compromettere alcune funzionalità del sito.</p>
+    <h3 className="heading-font text-lg text-forest mt-6">6. Maggiori Informazioni</h3>
+    <p>Per maggiori informazioni sul trattamento dei dati, consultare la nostra Privacy Policy o contattare: <strong>privacy@nonnacornelia.it</strong></p>
+  </>
+);
+
+const CookieBanner = ({ onAccept, onOpenCookie }: { onAccept: () => void; onOpenCookie: () => void }) => (
+  <div className="fixed bottom-0 left-0 right-0 z-[90] p-4 md:p-6">
+    <div className="max-w-3xl mx-auto bg-forest/95 backdrop-blur-md text-cream rounded-xl shadow-2xl p-5 md:p-6 border border-gold/30">
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+        <div className="flex-1">
+          <p className="text-sm md:text-base leading-relaxed">
+            🍪 Utilizziamo cookie tecnici e analitici per migliorare la tua esperienza. Continuando la navigazione, accetti l'uso dei cookie. 
+            <button onClick={onOpenCookie} className="gold-text underline hover:text-cream transition-colors ml-1">Scopri di più</button>
+          </p>
+        </div>
+        <div className="flex gap-3 shrink-0">
+          <button 
+            onClick={onAccept}
+            className="px-5 py-2 bg-gold text-forest font-bold text-xs uppercase tracking-widest rounded-full hover:bg-gold/80 transition-colors shadow-md"
+          >
+            Accetta
+          </button>
+          <button 
+            onClick={onAccept}
+            className="px-5 py-2 border border-cream/40 text-cream font-bold text-xs uppercase tracking-widest rounded-full hover:bg-cream/10 transition-colors"
+          >
+            Solo necessari
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const Footer = ({ onOpenPrivacy, onOpenCookie }: { onOpenPrivacy: () => void; onOpenCookie: () => void }) => (
   <footer className="h-auto py-12 regatta-stripes bg-fixed border-t-2 border-gold flex flex-col items-center justify-center relative mt-auto">
     <div className="absolute top-[-10px] bg-cream px-3 py-0.5 text-[10px] uppercase tracking-widest gold-text font-bold shadow-sm">
       Nonna Cornelia
@@ -207,9 +302,9 @@ const Footer = () => (
         </a>
       </div>
       <div className="flex flex-col md:flex-row gap-4 items-center text-[9px] uppercase tracking-widest text-forest/60 font-bold mb-4">
-        <a href="#" className="hover:text-gold">Privacy Policy</a>
+        <button onClick={onOpenPrivacy} className="hover:text-gold transition-colors cursor-pointer">Privacy Policy</button>
         <span className="hidden md:inline">•</span>
-        <a href="#" className="hover:text-gold">Cookie</a>
+        <button onClick={onOpenCookie} className="hover:text-gold transition-colors cursor-pointer">Cookie Policy</button>
         <span className="hidden md:inline">•</span>
         <span>P.IVA: IT01234567890</span>
       </div>
@@ -221,6 +316,17 @@ const Footer = () => (
 );
 
 export default function App() {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showCookie, setShowCookie] = useState(false);
+  const [cookieConsent, setCookieConsent] = useState(() => {
+    return localStorage.getItem('nonnacornelia-cookie-consent') === 'true';
+  });
+
+  const handleAcceptCookies = () => {
+    localStorage.setItem('nonnacornelia-cookie-consent', 'true');
+    setCookieConsent(true);
+  };
+
   return (
     <div className="min-h-screen bg-cream text-forest flex flex-col font-serif-body antialiased selection:bg-gold/30 selection:text-forest">
       <Navbar />
@@ -230,7 +336,26 @@ export default function App() {
       <SecretsSection />
       <CentralImageSection />
       <ContactSection />
-      <Footer />
+      <Footer onOpenPrivacy={() => setShowPrivacy(true)} onOpenCookie={() => setShowCookie(true)} />
+
+      {/* Cookie Consent Banner */}
+      {!cookieConsent && (
+        <CookieBanner onAccept={handleAcceptCookies} onOpenCookie={() => setShowCookie(true)} />
+      )}
+
+      {/* Privacy Policy Modal */}
+      {showPrivacy && (
+        <PolicyModal title="Privacy Policy" onClose={() => setShowPrivacy(false)}>
+          <PrivacyContent />
+        </PolicyModal>
+      )}
+
+      {/* Cookie Policy Modal */}
+      {showCookie && (
+        <PolicyModal title="Cookie Policy" onClose={() => setShowCookie(false)}>
+          <CookieContent />
+        </PolicyModal>
+      )}
     </div>
   );
 }
