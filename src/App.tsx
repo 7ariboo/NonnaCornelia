@@ -123,18 +123,16 @@ const StorySection = () => (
 
 const SecretsSection = () => {
   return (
-    <section id="qualita" className="h-screen px-0 lg:px-8 bg-forest text-cream text-center border-b-2 border-gold/30 flex items-center justify-center overflow-hidden">
-      <div className="w-full lg:w-[80%] lg:max-w-[700px] mx-auto flex items-center justify-center h-full">
-        <motion.img 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
-          src="/images/Segreti.png" 
-          alt="I Segreti della Nonna" 
-          className="w-[125%] max-w-[125%] md:w-full md:max-w-none max-h-[95vh] lg:max-h-none lg:h-auto object-contain drop-shadow-xl" 
-        />
-      </div>
+    <section id="qualita" className="h-screen bg-forest text-cream border-b-2 border-gold/30 overflow-hidden">
+      <motion.img 
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.8 }}
+        src="/images/Segreti.png" 
+        alt="I Segreti della Nonna" 
+        className="w-full h-full object-cover" 
+      />
     </section>
   );
 };
@@ -144,13 +142,13 @@ const CentralImageSection = () => (
     <img src="/images/Sfondo.png" alt="Sfondo" className="absolute inset-0 w-full h-full object-cover" />
     <div className="absolute inset-0 bg-forest/10 pointer-events-none"></div>
     <div className="relative z-10 w-full h-full flex items-center justify-center">
-      <img src="/images/Storia.png" alt="La nostra storia" className="w-[125%] max-w-[125%] md:w-full lg:w-[80%] max-h-[85vh] lg:max-h-none h-auto lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+      <img src="/images/Storia.png" alt="La nostra storia" className="w-full h-full object-cover" />
     </div>
   </section>
 );
 
 const ContactSection = () => (
-  <section id="contatti" className="relative min-h-screen w-full bg-forest flex flex-col items-center justify-center gap-4 lg:gap-6 overflow-hidden px-2 lg:px-8 py-8 lg:py-12">
+  <section id="contatti" className="relative min-h-screen w-full regatta-stripes bg-fixed flex flex-col items-center justify-center gap-4 lg:gap-6 overflow-hidden px-2 lg:px-8 py-8 lg:py-12">
     <motion.img 
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
