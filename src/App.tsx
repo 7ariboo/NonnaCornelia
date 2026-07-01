@@ -68,9 +68,11 @@ const VideoSection = () => (
       loop 
       muted 
       playsInline
+      preload="metadata"
+      poster="/video-poster.jpg"
       className="absolute inset-0 w-full h-full object-cover object-center"
     >
-      <source src="/VIDEO HOME.mp4" type="video/mp4" />
+      <source src="/video-home.mp4" type="video/mp4" />
     </video>
     <div className="relative z-10">
       <OvalLogo />
