@@ -139,7 +139,7 @@ const StorySection = () => (
 
 const SecretsSection = () => {
   return (
-    <section id="qualita" className="h-[50vh] md:h-screen bg-forest text-cream border-b-0 md:border-b-2 border-gold/30 overflow-hidden px-[9px] py-0 md:p-[20px]">
+    <section id="qualita" className="h-[50vh] md:h-screen bg-forest text-cream border-b-0 md:border-b-2 border-gold/30 overflow-hidden px-[10px] py-0 md:p-[20px]">
       <motion.img 
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -147,7 +147,7 @@ const SecretsSection = () => {
         transition={{ duration: 0.8 }}
         src="/images/Segreti.png" 
         alt="I Segreti della Nonna" 
-        className="w-full h-full object-cover md:object-contain" 
+        className="w-full h-full object-contain" 
       />
     </section>
   );
@@ -157,8 +157,8 @@ const CentralImageSection = () => (
   <section className="relative h-[50vh] md:h-screen w-full overflow-hidden">
     <img src="/images/Sfondo.png" alt="Sfondo" className="absolute inset-0 w-full h-full object-cover" />
     <div className="absolute inset-0 bg-forest/10 pointer-events-none"></div>
-    <div className="relative z-10 w-full h-full flex items-center justify-center px-[6px] py-0 md:p-[50px]">
-      <img src="/images/Storia.png" alt="La nostra storia" className="w-full h-full object-cover md:object-contain" />
+    <div className="relative z-10 w-full h-full flex items-center justify-center px-[10px] py-0 md:p-[50px]">
+      <img src="/images/Storia.png" alt="La nostra storia" className="w-full h-full object-contain" />
     </div>
   </section>
 );
