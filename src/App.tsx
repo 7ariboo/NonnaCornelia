@@ -139,7 +139,7 @@ const StorySection = () => (
 
 const SecretsSection = () => {
   return (
-    <section id="qualita" className="h-[50vh] md:h-screen bg-forest text-cream border-b-0 md:border-b-2 border-gold/30 overflow-hidden px-[5px] py-0 md:p-[20px]">
+    <section id="qualita" className="h-[50vh] md:h-screen bg-forest text-cream border-b-0 md:border-b-2 border-gold/30 overflow-hidden px-0 md:p-[20px]">
       <motion.img 
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -164,7 +164,7 @@ const CentralImageSection = () => (
 );
 
 const ContactSection = () => (
-  <section id="contatti" className="relative min-h-[50vh] md:min-h-screen w-full regatta-stripes bg-fixed flex flex-col items-center justify-center gap-1 lg:gap-6 overflow-hidden px-[2px] lg:px-8 pt-[18px] pb-0 md:py-12">
+  <section id="contatti" className="relative min-h-[50vh] md:min-h-screen w-full regatta-stripes bg-fixed flex flex-col items-center justify-center gap-1 lg:gap-6 overflow-hidden px-[5px] lg:px-8 pt-[18px] pb-0 md:py-12">
     <motion.img 
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
