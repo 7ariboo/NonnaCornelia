@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Droplet, Leaf, Milk as MilkIcon, Award, Instagram, Facebook, Apple } from 'lucide-react';
+import { Instagram, Facebook } from 'lucide-react';
 import { motion } from 'motion/react';
-
-const CssBow = () => (
-  <div className="bow-motif">
-    <div className="bow-left"></div>
-    <div className="bow-right"></div>
-    <div className="bow-knot"></div>
-  </div>
-);
 
 const Navbar = () => {
   return (
@@ -22,14 +14,14 @@ const Navbar = () => {
         {/* Left nav */}
         <nav className="justify-self-start flex items-center gap-2 md:gap-8 text-[8px] md:text-[11px] font-bold tracking-widest uppercase px-2 md:px-4 py-1.5 md:py-2 rounded-full border border-gold/30 bg-cream shadow-sm whitespace-nowrap" style={{ color: 'var(--color-forest)' }}>
           <a href="#storia" className="hover:text-gold transition-colors">La Storia</a>
-          <a href="#gusti" className="hover:text-gold transition-colors hidden sm:inline">I Gusti</a>
+          <a href="#qualita" className="hover:text-gold transition-colors hidden sm:inline">I Segreti</a>
         </nav>
 
         {/* Center logo */}
         <div className="flex items-center justify-center">
-          <div className="h-[50px] md:h-[64px] flex items-center justify-center">
+          <a href="#" aria-label="Torna all'inizio" className="h-[50px] md:h-[64px] flex items-center justify-center">
             <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="h-full w-auto object-contain" />
-          </div>
+          </a>
         </div>
 
         {/* Right nav */}
@@ -47,19 +39,7 @@ const OvalLogo = () => (
   </div>
 );
 
-const Hero = () => {
-  return (
-    <section className="relative h-screen pt-[70px] md:pt-20 regatta-stripes bg-fixed flex items-center justify-center border-b-2 border-gold overflow-hidden">
-      <div className="absolute inset-0 bg-forest opacity-10 pointer-events-none"></div>
-      <div className="relative z-10 flex flex-col items-center">
-        <OvalLogo />
-      </div>
-      <div className="absolute bottom-[-12px] bg-cream px-4 shadow-sm z-20">
-        <CssBow />
-      </div>
-    </section>
-  );
-};
+
 
 const VideoSection = () => (
   <section className="relative h-screen flex items-center justify-center bg-forest overflow-hidden border-b-2 border-gold/30">
@@ -283,14 +263,14 @@ const Footer = ({ onOpenPrivacy, onOpenCookie }: { onOpenPrivacy: () => void; on
       <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="w-40 h-auto object-contain mb-6" />
       <div className="flex gap-4 mb-8 text-[10px] font-bold tracking-widest uppercase text-forest/70">
         <a href="#storia" className="hover:text-gold transition-colors">La Storia</a>
-        <a href="#gusti" className="hover:text-gold transition-colors">I Gusti</a>
+        <a href="#qualita" className="hover:text-gold transition-colors">I Segreti</a>
         <a href="#contatti" className="hover:text-gold transition-colors">Dove Siamo</a>
       </div>
       <div className="flex gap-6 mb-6">
-        <a href="#" className="gold-text hover:text-forest transition-colors">
+        <a href="#" aria-label="Visita il nostro profilo Instagram" className="gold-text hover:text-forest transition-colors">
           <Instagram className="w-5 h-5 stroke-[1.5]" />
         </a>
-        <a href="#" className="gold-text hover:text-forest transition-colors">
+        <a href="#" aria-label="Visita la nostra pagina Facebook" className="gold-text hover:text-forest transition-colors">
           <Facebook className="w-5 h-5 stroke-[1.5]" />
         </a>
       </div>
