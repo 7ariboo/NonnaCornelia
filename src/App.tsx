@@ -79,15 +79,15 @@ const VideoSection = () => (
 );
 
 const StorySection = () => (
-  <section id="storia" className="relative min-h-[80vh] flex items-center justify-center border-b border-gold/30 overflow-hidden bg-cream">
-    <div className="relative z-10 w-full max-w-[1100px] mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-14">
-      {/* Image — left on desktop, top on mobile */}
+  <section id="storia" className="relative flex items-center justify-center border-b border-gold/30 overflow-hidden bg-cream">
+    <div className="relative z-10 w-full max-w-[1100px] mx-auto px-4 md:px-6 py-8 md:py-20 flex flex-col md:flex-row items-center gap-6 md:gap-14">
+      {/* Image — left on desktop, BELOW text on mobile */}
       <motion.div 
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="flex-1 flex items-center justify-center"
+        className="flex-1 flex items-center justify-center order-2 md:order-1"
       >
         <img 
           src="/images/Gelati.png" 
@@ -96,13 +96,13 @@ const StorySection = () => (
         />
       </motion.div>
 
-      {/* Text — right on desktop, bottom on mobile */}
+      {/* Text — right on desktop, TOP on mobile */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="flex-1 flex flex-col items-center md:items-start text-center md:text-left"
+        className="flex-1 flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-2"
       >
         <h2 className="heading-font text-4xl md:text-5xl mb-8 text-forest whitespace-nowrap">I Ricordi Buoni</h2>
         <p className="text-lg md:text-xl leading-relaxed mb-4 font-serif italic text-forest">
@@ -137,7 +137,7 @@ const StorySection = () => (
 
 const SecretsSection = () => {
   return (
-    <section id="qualita" className="h-screen bg-forest text-cream border-b-2 border-gold/30 overflow-hidden p-[20px]">
+    <section id="qualita" className="h-screen bg-forest text-cream border-b-2 border-gold/30 overflow-hidden p-1 md:p-[20px]">
       <motion.img 
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -155,14 +155,14 @@ const CentralImageSection = () => (
   <section className="relative h-screen w-full overflow-hidden">
     <img src="/images/Sfondo.png" alt="Sfondo" className="absolute inset-0 w-full h-full object-cover" />
     <div className="absolute inset-0 bg-forest/10 pointer-events-none"></div>
-    <div className="relative z-10 w-full h-full flex items-center justify-center p-6 md:p-[50px]">
+    <div className="relative z-10 w-full h-full flex items-center justify-center p-1 md:p-[50px]">
       <img src="/images/Storia.png" alt="La nostra storia" className="w-full h-full object-contain" />
     </div>
   </section>
 );
 
 const ContactSection = () => (
-  <section id="contatti" className="relative min-h-screen w-full regatta-stripes bg-fixed flex flex-col items-center justify-center gap-4 lg:gap-6 overflow-hidden px-2 lg:px-8 py-8 lg:py-12">
+  <section id="contatti" className="relative min-h-screen w-full regatta-stripes bg-fixed flex flex-col items-center justify-center gap-2 lg:gap-6 overflow-hidden px-1 lg:px-8 py-4 lg:py-12">
     <motion.img 
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
