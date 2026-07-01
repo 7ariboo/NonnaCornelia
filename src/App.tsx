@@ -139,7 +139,7 @@ const StorySection = () => (
 
 const SecretsSection = () => {
   return (
-    <section id="qualita" className="h-screen bg-forest text-cream border-b-2 border-gold/30 overflow-hidden p-1 md:p-[20px]">
+    <section id="qualita" className="h-[50vh] md:h-screen bg-forest text-cream border-b-0 md:border-b-2 border-gold/30 overflow-hidden p-0 md:p-[20px]">
       <motion.img 
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -147,30 +147,30 @@ const SecretsSection = () => {
         transition={{ duration: 0.8 }}
         src="/images/Segreti.png" 
         alt="I Segreti della Nonna" 
-        className="w-full h-full object-contain" 
+        className="w-full h-full object-cover md:object-contain" 
       />
     </section>
   );
 };
 
 const CentralImageSection = () => (
-  <section className="relative h-screen w-full overflow-hidden">
+  <section className="relative h-[50vh] md:h-screen w-full overflow-hidden">
     <img src="/images/Sfondo.png" alt="Sfondo" className="absolute inset-0 w-full h-full object-cover" />
     <div className="absolute inset-0 bg-forest/10 pointer-events-none"></div>
-    <div className="relative z-10 w-full h-full flex items-center justify-center p-1 md:p-[50px]">
-      <img src="/images/Storia.png" alt="La nostra storia" className="w-full h-full object-contain" />
+    <div className="relative z-10 w-full h-full flex items-center justify-center p-0 md:p-[50px]">
+      <img src="/images/Storia.png" alt="La nostra storia" className="w-full h-full object-cover md:object-contain" />
     </div>
   </section>
 );
 
 const ContactSection = () => (
-  <section id="contatti" className="relative min-h-screen w-full regatta-stripes bg-fixed flex flex-col items-center justify-center gap-2 lg:gap-6 overflow-hidden px-1 lg:px-8 py-4 lg:py-12">
+  <section id="contatti" className="relative min-h-[50vh] md:min-h-screen w-full regatta-stripes bg-fixed flex flex-col items-center justify-center gap-1 lg:gap-6 overflow-hidden px-0 lg:px-8 py-2 lg:py-12">
     <motion.img 
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6 }}
-      src="/images/Vieni.png" alt="Vieni a Trovarci" className="w-full lg:w-[80%] h-auto max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+      src="/images/Vieni.png" alt="Vieni a Trovarci" className="w-full lg:w-[80%] h-auto max-h-[48vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
     <motion.img 
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
