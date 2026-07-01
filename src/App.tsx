@@ -155,8 +155,8 @@ const CentralImageSection = () => (
   <section className="relative h-screen w-full overflow-hidden">
     <img src="/images/Sfondo.png" alt="Sfondo" className="absolute inset-0 w-full h-full object-cover" />
     <div className="absolute inset-0 bg-forest/10 pointer-events-none"></div>
-    <div className="relative z-10 w-full h-full flex items-center justify-center">
-      <img src="/images/Storia.png" alt="La nostra storia" className="w-full h-full object-cover" />
+    <div className="relative z-10 w-full h-full flex items-center justify-center p-6 md:p-[50px]">
+      <img src="/images/Storia.png" alt="La nostra storia" className="w-full h-full object-contain" />
     </div>
   </section>
 );
