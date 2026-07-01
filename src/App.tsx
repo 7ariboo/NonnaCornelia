@@ -104,12 +104,26 @@ const StorySection = () => (
         transition={{ duration: 0.8, delay: 0.2 }}
         className="flex-1 flex flex-col items-center md:items-start text-center md:text-left"
       >
-        <h2 className="heading-font text-4xl md:text-5xl mb-8 italic text-forest">La Nostra Storia</h2>
-        <p className="text-lg md:text-xl leading-relaxed mb-6 font-serif italic text-gray-800">
-          Negli anni '60, in Brianza, il padre di Cornelia aveva un carretto dei gelati. Ogni giorno attraversava paesi e piazze. Cornelia era sempre con lui ed è lì che ha imparato tutto.
+        <h2 className="heading-font text-4xl md:text-5xl mb-8 italic text-forest">I Ricordi Buoni</h2>
+        <p className="text-lg md:text-xl leading-relaxed mb-4 font-serif italic text-forest">
+          Negli anni '60, in Brianza, il padre di Cornelia<br />
+          aveva un carretto dei gelati.<br />
+          Ogni giorno attraversava paesi e piazze.<br />
+          Cornelia era sempre con lui.<br />
+          È lì che ha imparato tutto.
         </p>
-        <p className="text-lg md:text-xl leading-relaxed mb-10 font-serif italic text-gray-800">
-          Prima di uscire, suo padre le legava sempre un fiocco giallo nei capelli. Cornelia gli chiese perché: <strong>"COSÌ TI VEDO SEMPRE."</strong> Nel caos della gente, era il suo segno distintivo. Oggi è rimasto.
+        <p className="text-lg md:text-xl leading-relaxed mb-4 font-serif italic text-forest">
+          Prima di uscire, suo padre le legava sempre un<br />
+          fiocco giallo nei capelli.<br />
+          Cornelia gli chiese perché.
+        </p>
+        <p className="text-2xl md:text-3xl leading-relaxed mb-4 font-serif italic text-forest font-bold">
+          "Così ti vedo sempre."
+        </p>
+        <p className="text-lg md:text-xl leading-relaxed mb-10 font-serif italic text-forest">
+          Nel caos della gente, era il suo segno distintivo.<br />
+          Oggi è rimasto. Per lo stesso motivo:<br />
+          riconoscersi subito.
         </p>
         <div className="flex items-center gap-4">
           <span className="w-20 h-[1px] bg-gold"></span>
