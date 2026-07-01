@@ -117,7 +117,7 @@ const StorySection = () => (
           fiocco giallo nei capelli.<br />
           Cornelia gli chiese perché.
         </p>
-        <p className="text-2xl md:text-3xl leading-relaxed mb-4 font-serif italic text-forest font-bold">
+        <p className="text-lg md:text-xl leading-relaxed mb-4 font-serif italic text-forest">
           "Così ti vedo sempre."
         </p>
         <p className="text-lg md:text-xl leading-relaxed mb-10 font-serif italic text-forest">
