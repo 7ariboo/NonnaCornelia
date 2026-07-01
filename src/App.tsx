@@ -11,79 +11,29 @@ const CssBow = () => (
 );
 
 const Navbar = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const progress = Math.min(Math.max((scrollY - 30) / 150, 0), 1);
-  const stripesOpacity = progress;
-  const borderOpacity = progress;
-  const logoScale = 0.5 + (progress * 0.5); 
-  const logoTranslateY = 60 * (1 - progress); 
-
-  const pillStyle = {
-    backgroundColor: `rgba(242, 237, 228, ${progress})`,
-    borderColor: `rgba(212, 175, 55, ${progress * 0.3})`,
-    boxShadow: `0 2px 8px rgba(0,0,0,${progress * 0.1})`,
-    color: 'var(--color-forest)'
-  };
-
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full h-[70px] md:h-20 z-50 overflow-hidden ${progress > 0 ? 'shadow-md' : 'shadow-sm'}`}
-      style={{
-        borderBottom: `1px solid rgba(212, 175, 55, ${borderOpacity})`
-      }}
-    >
-      {/* Base Background */}
-      <div className="absolute inset-0 bg-cream pointer-events-none"></div>
-      
-      {/* Fading Regatta Stripes Background */}
-      <div 
-        className="absolute inset-0 regatta-stripes bg-fixed pointer-events-none"
-        style={{ opacity: stripesOpacity }}
-      ></div>
-      <div 
-        className="absolute inset-0 bg-forest pointer-events-none"
-        style={{ opacity: stripesOpacity * 0.1 }}
-      ></div>
+    <header className="fixed top-0 left-0 w-full h-[70px] md:h-20 z-50 overflow-hidden shadow-md" style={{ borderBottom: '1px solid rgba(212, 175, 55, 0.3)' }}>
+      {/* Regatta Stripes Background */}
+      <div className="absolute inset-0 regatta-stripes bg-fixed pointer-events-none"></div>
+      <div className="absolute inset-0 bg-forest opacity-[0.1] pointer-events-none"></div>
       
       {/* 3-column grid: left nav | center logo | right nav */}
       <div className="relative z-10 h-full grid grid-cols-[1fr_auto_1fr] items-center px-3 md:px-10">
-        {/* Left nav — aligned left */}
-        <nav 
-          className="justify-self-start flex items-center gap-2 md:gap-8 text-[8px] md:text-[11px] font-bold tracking-widest uppercase px-2 md:px-4 py-1.5 md:py-2 rounded-full border transition-colors duration-300 whitespace-nowrap"
-          style={pillStyle}
-        >
+        {/* Left nav */}
+        <nav className="justify-self-start flex items-center gap-2 md:gap-8 text-[8px] md:text-[11px] font-bold tracking-widest uppercase px-2 md:px-4 py-1.5 md:py-2 rounded-full border border-gold/30 bg-cream shadow-sm whitespace-nowrap" style={{ color: 'var(--color-forest)' }}>
           <a href="#storia" className="hover:text-gold transition-colors">La Storia</a>
           <a href="#gusti" className="hover:text-gold transition-colors hidden sm:inline">I Gusti</a>
         </nav>
 
-        {/* Center logo — stays in its own column */}
-        <div 
-          className="flex items-center justify-center pointer-events-none"
-          style={{
-            opacity: progress,
-            transform: `translateY(${logoTranslateY}px) scale(${logoScale})`
-          }}
-        >
+        {/* Center logo */}
+        <div className="flex items-center justify-center">
           <div className="h-[50px] md:h-[64px] flex items-center justify-center">
             <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="h-full w-auto object-contain" />
           </div>
         </div>
 
-        {/* Right nav — aligned right */}
-        <div 
-          className="justify-self-end flex items-center gap-2 md:gap-8 text-[8px] md:text-[11px] font-bold tracking-widest uppercase px-2 md:px-4 py-1.5 md:py-2 rounded-full border transition-colors duration-300 whitespace-nowrap"
-          style={pillStyle}
-        >
+        {/* Right nav */}
+        <div className="justify-self-end flex items-center gap-2 md:gap-8 text-[8px] md:text-[11px] font-bold tracking-widest uppercase px-2 md:px-4 py-1.5 md:py-2 rounded-full border border-gold/30 bg-cream shadow-sm whitespace-nowrap" style={{ color: 'var(--color-forest)' }}>
           <a href="#contatti" className="hover:text-gold transition-colors">Dove Siamo</a>
         </div>
       </div>
