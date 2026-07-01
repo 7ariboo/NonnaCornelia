@@ -104,7 +104,7 @@ const StorySection = () => (
         transition={{ duration: 0.8, delay: 0.2 }}
         className="flex-1 flex flex-col items-center md:items-start text-center md:text-left"
       >
-        <h2 className="heading-font text-4xl md:text-5xl mb-8 italic text-forest">I Ricordi Buoni</h2>
+        <h2 className="heading-font text-4xl md:text-5xl mb-8 text-forest whitespace-nowrap">I Ricordi Buoni</h2>
         <p className="text-lg md:text-xl leading-relaxed mb-4 font-serif italic text-forest">
           Negli anni '60, in Brianza, il padre di Cornelia<br />
           aveva un carretto dei gelati.<br />
@@ -137,7 +137,7 @@ const StorySection = () => (
 
 const SecretsSection = () => {
   return (
-    <section id="qualita" className="h-screen bg-forest text-cream border-b-2 border-gold/30 overflow-hidden">
+    <section id="qualita" className="h-screen bg-forest text-cream border-b-2 border-gold/30 overflow-hidden p-[20px]">
       <motion.img 
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
