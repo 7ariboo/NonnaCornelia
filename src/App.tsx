@@ -145,7 +145,7 @@ const SecretsSection = () => {
         transition={{ duration: 0.8 }}
         src="/images/Segreti.png" 
         alt="I Segreti della Nonna" 
-        className="w-full h-full object-cover" 
+        className="w-full h-full object-contain" 
       />
     </section>
   );
@@ -168,13 +168,13 @@ const ContactSection = () => (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6 }}
-      src="/images/Vieni.png" alt="Vieni a Trovarci" className="w-[125%] max-w-[125%] md:w-full lg:w-[80%] h-auto max-h-[45vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+      src="/images/Vieni.png" alt="Vieni a Trovarci" className="w-full lg:w-[80%] h-auto max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
     <motion.img 
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      src="/images/Orari.png" alt="I Nostri Orari" className="w-[125%] max-w-[125%] md:w-full lg:w-[80%] h-auto max-h-[45vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl" />
+      src="/images/Orari.png" alt="I Nostri Orari" className="w-full lg:w-[80%] h-auto max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl" />
   </section>
 );
 
