@@ -147,7 +147,7 @@ const SecretsSection = () => {
         transition={{ duration: 0.8 }}
         src="/images/Segreti.png" 
         alt="I Segreti della Nonna" 
-        className="w-[calc(100%+4px)] max-w-none h-full object-contain -ml-[2px] md:w-full md:h-full md:ml-0 md:max-w-full" 
+        className="w-full h-full object-contain" 
       />
     </section>
   );
@@ -176,7 +176,7 @@ const ContactSection = () => (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      src="/images/Orari.png" alt="I Nostri Orari" className="w-[125%] max-w-[125%] md:max-w-full md:w-full lg:w-[80%] h-auto max-h-[55vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl" />
+      src="/images/Orari.png" alt="I Nostri Orari" className="relative left-1/2 -translate-x-1/2 w-[125%] max-w-[125%] md:static md:translate-x-0 md:max-w-full md:w-full lg:w-[80%] h-auto max-h-[55vh] lg:max-h-[45vh] lg:max-w-[700px] object-contain drop-shadow-2xl" />
   </section>
 );
 
