@@ -139,7 +139,7 @@ const StorySection = () => (
 
 const SecretsSection = () => {
   return (
-    <section id="qualita" className="h-[50vh] md:h-screen bg-forest text-cream border-b-0 md:border-b-2 border-gold/30 overflow-hidden px-[5px] py-0 md:p-[20px]">
+    <section id="qualita" className="h-[50vh] md:h-screen bg-forest text-cream border-b-0 md:border-b-2 border-gold/30 overflow-hidden px-[9px] py-0 md:p-[20px]">
       <motion.img 
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -157,14 +157,14 @@ const CentralImageSection = () => (
   <section className="relative h-[50vh] md:h-screen w-full overflow-hidden">
     <img src="/images/Sfondo.png" alt="Sfondo" className="absolute inset-0 w-full h-full object-cover" />
     <div className="absolute inset-0 bg-forest/10 pointer-events-none"></div>
-    <div className="relative z-10 w-full h-full flex items-center justify-center px-[2px] py-0 md:p-[50px]">
+    <div className="relative z-10 w-full h-full flex items-center justify-center px-[6px] py-0 md:p-[50px]">
       <img src="/images/Storia.png" alt="La nostra storia" className="w-full h-full object-cover md:object-contain" />
     </div>
   </section>
 );
 
 const ContactSection = () => (
-  <section id="contatti" className="relative min-h-[50vh] md:min-h-screen w-full regatta-stripes bg-fixed flex flex-col items-center justify-center gap-1 lg:gap-6 overflow-hidden px-0 lg:px-8 pt-[10px] pb-0 md:py-12">
+  <section id="contatti" className="relative min-h-[50vh] md:min-h-screen w-full regatta-stripes bg-fixed flex flex-col items-center justify-center gap-1 lg:gap-6 overflow-hidden px-0 lg:px-8 pt-[18px] pb-0 md:py-12">
     <motion.img 
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
