@@ -267,11 +267,14 @@ const Footer = ({ onOpenPrivacy, onOpenCookie }: { onOpenPrivacy: () => void; on
         <a href="#contatti" className="hover:text-gold transition-colors">Dove Siamo</a>
       </div>
       <div className="flex gap-6 mb-6">
-        <a href="#" aria-label="Visita il nostro profilo Instagram" className="gold-text hover:text-forest transition-colors">
+        <a href="https://www.instagram.com/nonnacornelia.monza?igsh=MXMzcTNvNzQ2eWRnbw==" target="_blank" rel="noopener noreferrer" aria-label="Visita il nostro profilo Instagram" className="gold-text hover:text-forest transition-colors">
           <Instagram className="w-5 h-5 stroke-[1.5]" />
         </a>
-        <a href="#" aria-label="Visita la nostra pagina Facebook" className="gold-text hover:text-forest transition-colors">
+        <a href="https://www.facebook.com/share/1EhZHJNxgV/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Visita la nostra pagina Facebook" className="gold-text hover:text-forest transition-colors">
           <Facebook className="w-5 h-5 stroke-[1.5]" />
+        </a>
+        <a href="https://www.tiktok.com/@nonnacorneliamonza?_r=1&_t=ZN-97roMhF53sE" target="_blank" rel="noopener noreferrer" aria-label="Visita il nostro profilo TikTok" className="gold-text hover:text-forest transition-colors">
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.41a8.16 8.16 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.84z"/></svg>
         </a>
       </div>
       <div className="flex flex-col md:flex-row gap-4 items-center text-[9px] uppercase tracking-widest text-forest/60 font-bold mb-4">
