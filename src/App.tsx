@@ -156,7 +156,7 @@ const ContactSection = () => (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      src="/images/Orari.png" alt="I Nostri Orari" className="w-full lg:w-[80%] scale-105 md:scale-100 h-auto max-h-[55vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl py-[10px] md:py-0" />
+      src="/images/Orari.png" alt="I Nostri Orari" className="w-[90%] lg:w-[80%] h-auto max-h-[55vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl py-[10px] md:py-0" />
   </section>
 );
 
