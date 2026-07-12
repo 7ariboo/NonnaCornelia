@@ -181,7 +181,7 @@ const PrivacyContent = () => (
   <>
     <p><strong>Ultimo aggiornamento:</strong> {new Date().toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
     <h3 className="heading-font text-lg text-forest mt-6">1. Titolare del Trattamento</h3>
-    <p>Il titolare del trattamento dei dati è Nonna Cornelia, con sede legale in Brianza (MB), Italia. P.IVA: IT01234567890.</p>
+    <p>Il titolare del trattamento dei dati è Nonna Cornelia, con sede legale in Brianza (MB), Italia. P.IVA: IT14645050965.</p>
     <h3 className="heading-font text-lg text-forest mt-6">2. Dati Raccolti</h3>
     <p>Raccogliamo i seguenti dati personali:</p>
     <ul className="list-disc pl-6 space-y-1">
@@ -282,7 +282,7 @@ const Footer = ({ onOpenPrivacy, onOpenCookie }: { onOpenPrivacy: () => void; on
         <span className="hidden md:inline">•</span>
         <button onClick={onOpenCookie} className="hover:text-gold transition-colors cursor-pointer">Cookie Policy</button>
         <span className="hidden md:inline">•</span>
-        <span>P.IVA: IT01234567890</span>
+        <span>P.IVA: IT14645050965</span>
       </div>
       <div className="text-[9px] uppercase tracking-widest gold-text font-bold">
         &copy; {new Date().getFullYear()} Tutti i diritti riservati.
