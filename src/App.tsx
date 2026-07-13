@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* Center logo */}
         <div className="flex items-center justify-center">
           <a href="#" aria-label="Torna all'inizio" className="h-[50px] md:h-[64px] flex items-center justify-center">
-            <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="h-full w-auto object-contain" />
+            <img src="/images/logo_v2.png" alt="Nonna Cornelia Logo" className="h-full w-auto object-contain" />
           </a>
         </div>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
 
 const OvalLogo = () => (
   <div className="w-[75%] md:w-[500px] mx-auto flex items-center justify-center relative z-10" style={{aspectRatio: '1.5/1'}}>
-    <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="w-full h-auto object-contain drop-shadow-2xl" />
+    <img src="/images/logo_v2.png" alt="Nonna Cornelia Logo" className="w-full h-auto object-contain drop-shadow-2xl" />
   </div>
 );
 
@@ -72,7 +72,7 @@ const StorySection = () => (
         className="flex-1 flex items-center justify-center order-2 md:order-1"
       >
         <img 
-          src="/images/Gelati.png" 
+          src="/images/gelati_v2.png" 
           alt="I nostri gelati artigianali" 
           className="w-full max-w-[500px] h-auto object-contain rounded-lg shadow-xl"
         />
@@ -125,7 +125,7 @@ const SecretsSection = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.8 }}
-        src="/images/Segreti.png" 
+        src="/images/segreti_v2.png" 
         alt="I Segreti della Nonna" 
         className="w-full h-full object-contain" 
       />
@@ -135,10 +135,10 @@ const SecretsSection = () => {
 
 const CentralImageSection = () => (
   <section className="relative h-[50vh] md:h-screen w-full overflow-hidden">
-    <img src="/images/Sfondo.png" alt="Sfondo" className="absolute inset-0 w-full h-full object-cover" />
+    <img src="/images/sfondo_v2.png" alt="Sfondo" className="absolute inset-0 w-full h-full object-cover" />
     <div className="absolute inset-0 bg-forest/10 pointer-events-none"></div>
     <div className="relative z-10 w-full h-full flex items-center justify-center px-[10px] py-0 md:p-[50px]">
-      <img src="/images/Storia.png" alt="La nostra storia" className="w-full h-full object-contain" />
+      <img src="/images/storia_v2.png" alt="La nostra storia" className="w-full h-full object-contain" />
     </div>
   </section>
 );
@@ -150,13 +150,13 @@ const ContactSection = () => (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6 }}
-      src="/images/Vieni.png" alt="Vieni a Trovarci" className="w-full lg:w-[80%] h-auto max-h-[55vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
+      src="/images/vieni_v2.png" alt="Vieni a Trovarci" className="w-full lg:w-[80%] h-auto max-h-[55vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-xl" />
     <motion.img 
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      src="/images/Orari.png" alt="I Nostri Orari" className="w-[90%] lg:w-[80%] h-auto max-h-[55vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl py-[10px] md:py-0" />
+      src="/images/orari_v2.png" alt="I Nostri Orari" className="w-[90%] lg:w-[80%] h-auto max-h-[55vh] lg:max-h-[45vh] lg:max-w-[700px] mx-auto object-contain drop-shadow-2xl py-[10px] md:py-0" />
   </section>
 );
 
@@ -260,7 +260,7 @@ const Footer = ({ onOpenPrivacy, onOpenCookie }: { onOpenPrivacy: () => void; on
       Nonna Cornelia
     </div>
     <div className="bg-cream/95 p-8 rounded flex flex-col items-center shadow-lg gold-border mt-4 text-center">
-      <img src="/images/Logo.png" alt="Nonna Cornelia Logo" className="w-40 h-auto object-contain mb-6" />
+      <img src="/images/logo_v2.png" alt="Nonna Cornelia Logo" className="w-40 h-auto object-contain mb-6" />
       <div className="flex gap-4 mb-8 text-[10px] font-bold tracking-widest uppercase text-forest/70">
         <a href="#storia" className="hover:text-gold transition-colors">La Storia</a>
         <a href="#qualita" className="hover:text-gold transition-colors">I Segreti</a>
